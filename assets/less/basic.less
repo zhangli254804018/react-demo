@@ -1,0 +1,66 @@
+@import '_mixins.less';
+.fade-enter {
+    opacity: 0;
+}
+
+.fade-enter.fade-enter-active {
+    opacity: 1;
+    transition: all .3s ease-in;
+}
+
+.fade-exit {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-exit.fade-exit-active {
+    opacity: 0;
+    transition: all .3s ease-out;
+}
+
+.fade-appear {
+    opacity: 0.01;
+}
+
+.fade-appear.fade-appear-active {
+    opacity: 1;
+    transition: opacity .3s ease-in;
+}
+
+@media screen and (max-width: 321px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+@media screen and (min-width: 321px) and (max-width: 400px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 400px) {
+    body {
+        font-size: 16px;
+    }
+}
+
+#swiper-containers {
+    height: inherit;
+    .swiper-button-prev,
+    .swiper-button-next {
+        width: 1rem;
+        height: 2rem;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background-size: 100%;
+    }
+    .swiper-button-prev {
+        background-image: url('@{image-url}01_.png') !important;
+    }
+    .swiper-button-next {
+        background-image: url('@{image-url}01_.png') !important;
+        .transform(rotate(180deg));
+    }
+}
