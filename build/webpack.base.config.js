@@ -135,6 +135,11 @@ module.exports = {
             filename: '../index.php',
             template: 'src/template/index.php'
         }),
+        new HtmlWebpackPlugin({ // Also generate a test.html
+            title: '點花燈 鬧元宵---- 一紙字謎 共賞華燈初上',
+            filename: '../index.html',
+            template: 'src/template/index.html'
+        }),
         new HtmlStringReplace({
             enable: true,
             patterns: [

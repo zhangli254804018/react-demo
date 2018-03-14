@@ -41,7 +41,7 @@ class homeView extends Component {
       }
       js = d.createElement(s);
       js.id = id;
-      js.src = '//connect.facebook.net/zh_TW/sdk.js';
+      js.src = 'https://connect.facebook.net/zh_TW/sdk.js';
       fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));
 
@@ -80,7 +80,7 @@ class homeView extends Component {
       js = d.createElement('script');
       js.id = id;
       js.async = true;
-      js.src = '/login/all.js?v=' + date.getFullYear() + date.getMonth() + date.getDate();
+      js.src = 'https://rcshow.tv/login/all.js?v=' + date.getFullYear() + date.getMonth() + date.getDate();
       ref.appendChild(js);
     })(document);
     // actions.fetchCity()
